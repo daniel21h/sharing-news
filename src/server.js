@@ -12,6 +12,6 @@ mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0-xqstv.mongodb.net/s
 server.use(express.json());
 server.use(routes);
 
-server.listen(3333, () => {
+server.listen(process.env.PORT || 3001, () => {
   console.log('Server running on port 3333');
 });
