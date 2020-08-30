@@ -6,6 +6,7 @@ const SharingSchema = new mongoose.Schema({
   title: String,
   subtitle:  String,
   description: String,
+  created: { type: Date, default: Date.now }
 });
 
 SharingSchema.plugin(mongoosePaginate);
