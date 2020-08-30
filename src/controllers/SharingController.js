@@ -5,7 +5,7 @@ const Sharing = require('../models/SharingModel');
 module.exports = {
   async index(req, res) {
     const {page = 1} = req.query;
-    const sharing = await Sharing.paginate({}, {page, limit: 10});
+    const sharing = await Sharing.paginate({}, {page, limit: 10, sort: -1 });
 
     return res.json(sharing);
   },
